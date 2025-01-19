@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Accordion } from "flowbite";
+import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
+import type { InstanceOptions } from 'flowbite';
+import { initFlowbite } from 'flowbite';
+import { FlowbiteService } from '../services/flowbite.service';
+
+
+
 
 @Component({
   selector: 'app-questions',
@@ -6,6 +14,14 @@ import { Component } from '@angular/core';
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.css'
 })
-export class QuestionsComponent {
+export class QuestionsComponent implements OnInit {
+  constructor(private flowbiteService: FlowbiteService) {}
+
+  ngOnInit(): void {
+    this.flowbiteService.loadFlowbite(flowbite => {
+      // Your custom code here
+      console.log('Flowbite loaded', flowbite);
+    });
+  }
 
 }
