@@ -14,14 +14,13 @@ import { FlowbiteService } from '../services/flowbite.service';
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.css'
 })
-export class QuestionsComponent implements OnInit {
-  constructor(private flowbiteService: FlowbiteService) {}
+export class QuestionsComponent {
+  // constructor(private flowbiteService: FlowbiteService) {}
 
-  ngOnInit(): void {
-    this.flowbiteService.loadFlowbite(flowbite => {
-      // Your custom code here
-      console.log('Flowbite loaded', flowbite);
-    });
-  }
+  // ngOnInit(): void {
+  //   this.flowbiteService.loadFlowbite(flowbite => {
+  //     console.log('Flowbite loaded', flowbite);
+  //   });
+  // }
 
 }

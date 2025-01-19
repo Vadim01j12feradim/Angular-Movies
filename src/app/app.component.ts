@@ -6,10 +6,11 @@ import { SugerenciasComponent } from './sugerencias/sugerencias.component';
 import { ReasonsComponent } from './reasons/reasons.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { initFlowbite } from 'flowbite';
+import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-root',
-  imports: [QuestionsComponent,RouterOutlet,FooterComponent, HeaderComponent, SugerenciasComponent,ReasonsComponent],
+  imports: [RegisterComponent,QuestionsComponent,RouterOutlet,FooterComponent, HeaderComponent, SugerenciasComponent,ReasonsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
